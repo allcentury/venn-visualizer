@@ -1,6 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 
+import { BarChart } from 'reaviz';
+
+const data = [
+  { key: 'IDS', data: 14 },
+  { key: 'Malware', data: 5 },
+  { key: 'DLP', data: 18 }
+];
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +26,8 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <BarChart width={350} height={250} data={data} />;
     </div>
   );
 }
